@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extract Tables from Image</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #result { display: flex; }
+    #result img { max-width: 50%; }
+    #result pre { max-width: 50%; overflow: auto; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Extract Tables</h1>
+  <div id="result">
+    <img id="image" src="" alt="Selected Image">
+    <pre id="table"></pre>
+  </div>
+  <script src="popup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+</body>
+</html>
