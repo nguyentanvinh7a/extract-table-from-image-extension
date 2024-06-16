@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Extract Tables from Image</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    #result { display: flex; }
-    #result img { max-width: 50%; }
-    #result pre { max-width: 50%; overflow: auto; white-space: pre-wrap; }
-  </style>
-</head>
-<body>
-  <h1>Extract Tables</h1>
-  <div id="result">
-    <img id="image" src="" alt="Selected Image">
-    <pre id="table"></pre>
-  </div>
-  <script src="popup.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
-</body>
+<html>
+  <head>
+    <title>Extract Tables</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      #copyButton {
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #copyButton:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Extracted Table</h1>
+    <div>
+      <table id="resultTable"></table>
+    </div>
+    <button id="copyButton">Copy Table</button>
+    <h2>Original Image</h2>
+    <img id="image" alt="Selected Image" style="max-width: 100%" />
+    <script src="popup.js"></script>
+  </body>
 </html>
